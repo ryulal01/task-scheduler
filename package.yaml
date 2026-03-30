@@ -1,0 +1,32 @@
+name: task
+version: 0.1.0.0
+
+dependencies:
+  - base
+  - blaze-html
+  - stm
+  - unliftio-core
+  - containers
+  - async
+
+library:
+  source-dirs: src
+
+tests:
+  task-test:
+    main: Main.hs
+    source-dirs: test
+    dependencies:
+      - task
+      - tasty
+      - tasty-hunit
+      - stm
+      - transformers
+      - unliftio-core
+benchmarks:
+  bench:
+    main: Bench.hs
+    source-dirs: bench
+    dependencies:
+      - task
+      - time
